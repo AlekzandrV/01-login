@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  br
+  button(onclick="signin()") Login
+
+  script.
+    var lock = new Auth0Lock('#{env.AUTH0_CLIENT_ID}', '#{env.AUTH0_DOMAIN}', { auth: {
+          redirectUrl: '#{env.AUTH0_CALLBACK_URL}'
+        , responseType: 'code'
+        , params: {
+          scope: 'openid name email picture 111'
+        }
+      },
+      allowSignUp: true,
+      theme: {
+        logo: 'http://www.clker.com/cliparts/1/3/c/7/14523854441990438377orange-sky-hi.png',
+        primaryColor: '#31324F'
+      }});
+    function signin() {
+      lock.show();
+    }
