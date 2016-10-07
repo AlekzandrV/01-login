@@ -5,7 +5,7 @@ var router = express.Router();
 var env = {
   AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID || 'AaR58yNI5WKF3sDpqsKsEnuDGCYbS8UX',
   AUTH0_DOMAIN: process.env.AUTH0_DOMAIN || 'ovirnyi.eu.auth0.com',
-  AUTH0_CALLBACK_URL: process.env.AUTH0_CALLBACK_URL || 'http://private-53975-orangeskymarketplaceapi.apiary-mock.com'
+  AUTH0_CALLBACK_URL: process.env.AUTH0_CALLBACK_URL || 'https://peaceful-ocean-31239.herokuapp.com/callback'
 };
 
 /* GET home page. */
